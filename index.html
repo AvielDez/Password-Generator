@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Karla:wght@800&display=swap" rel="stylesheet"> 
+
+    <title>Password Generator</title>
+</head>
+<body>
+    <div>
+        <!--Title Section-->
+        <div>
+            <h2 class="intro-h2">Generate a <br> <span class="intro-contrast-span">random password</span></h2>
+            <p class="intro-p">Never use an insecure password again</p>
+        </div>
+        <!--Input Section-->
+        <div>
+            <div class="input-choices">
+
+                <div class="input-container">
+                    <p>Numbers</p>
+                    <div id="numbers-toggle-switch" class="input-toggle-switch">
+                        <div id="numbers-circle" class="input-toggle-circle"></div>
+                    </div>
+                </div>
+
+                <div class="input-container">
+                    <p>Symbols</p>
+                    <div id="symbols-toggle-switch" class="input-toggle-switch">
+                        <div id="symbols-circle" class="input-toggle-circle"></div>
+                    </div>
+                </div>
+                <div class="input-container">
+                    <p>Enter Password Length</p>
+                    <input id="character-length" class="input-text" type="text" placeholder="8">
+                </div>
+            </div>
+
+            <div>
+                <p id="error-message-el" class="error-message"></p>
+            </div>
+
+            <button id="generate-password-btn" class="generate-password-btn">Generate Passwords</button>
+
+        </div>
+
+        <hr>
+        <!--Generated Password Section-->
+        <div class="password-container">
+
+            <div class="password-background">
+                <p id="password-one-el" class="password-p"></p>
+            </div>
+
+            <div class="password-background">
+                <p id="password-two-el" class="password-p"></p>
+            </div>
+        </div>
+        <p id="is-copied-el" class="is-copied">Click password to copy</p>
+    </div>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+</html>

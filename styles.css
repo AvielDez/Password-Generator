@@ -1,0 +1,162 @@
+:root{
+    /*Colors*/
+    --background-color: #1F2937;
+    --password-background-color: #273549;
+    --contrast-color: hsl(144, 70%, 58%);
+    --light-color: white;
+    --grey-color: #D5D4D8;
+    --error-message-color: #df4b49;
+
+    /*Fonts*/
+    --inter: 'Inter', sans-serif;
+    --karla: 'Karla', sans-serif;
+
+}
+
+html, body{
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    height: 100vh;
+    background-color: var(--background-color);
+    font-family: var(--inter);
+    color: var(--light-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-h2{
+    font-family: var(--karla);
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.intro-contrast-span{
+    color: var(--contrast-color);
+}
+.intro-p{
+    margin-top: 0;
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--grey-color);
+}
+.input-choices{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 20px;
+    margin-bottom: 0;
+}
+.input-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.input-toggle-switch{
+    height: 25px;
+    width: 50px;
+    background: var(--contrast-color);
+    border-radius: 15px;
+    transition: all 500ms;
+}
+.input-toggle-circle{
+    height: 18px;
+    width: 18px;
+    background: var(--grey-color);
+    box-shadow: 0 0 10px grey;
+    border-radius: 50%;
+    margin: 3.5px 5px;
+    transition: all 500ms;
+}
+.input-text{
+    width: 25px;
+    padding: 5px;
+    text-align: center;
+    background: var(--password-background-color);
+    color: var(--contrast-color);
+    font-size: 16px;
+    border: none;
+    font-family: inherit;
+}
+
+.generate-password-btn{
+    font-weight: 500;
+    text-shadow: 0 0 5px black;
+    margin-top: 30px;
+    margin-bottom: 0;
+    width: 200px;
+    padding: 8px;
+    text-align: center;
+    background: var(--contrast-color);
+    border-radius: 5px;
+    border: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    border: 2px solid var(--contrast-color);
+}
+
+.generate-password-btn:active{
+    box-shadow: 0 0 10px black;
+    filter: saturate(75%);
+    border: 2px solid var(--background-color);
+}
+
+hr{
+    margin-top: 40px;
+    margin-bottom: 0;
+    border-style: solid;
+}
+
+.password-container{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.password-background{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 211px;
+    height: 39px;
+    background: var(--password-background-color);
+    border-radius: 5px;
+    border: 2px solid var(--password-background-color);
+}
+.password-background:active{
+    border: 2px solid var(--background-color);
+}
+.password-p{
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--contrast-color);
+}
+
+.error-message{
+    color: var(--error-message-color);
+    margin: 5px 10px;
+}
+
+.is-copied{
+   color: var(--contrast-color);
+   animation-fill-mode: backwards;
+}
+
+@keyframes fadeInFadeOut{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+
+}
+
+
